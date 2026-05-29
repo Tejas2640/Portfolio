@@ -1,0 +1,110 @@
+@import "tailwindcss";
+
+/* BASE */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #000;
+  color: #fff;
+  font-family: system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+/* smooth rendering */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* BACKGROUND GLOW (OPTIMIZED) */
+body::before {
+  content: "";
+  position: fixed;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(59,130,246,0.18), transparent 60%);
+  top: -200px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+  filter: blur(80px);
+  pointer-events: none;
+}
+
+/* SECTION SPACING */
+section {
+  padding: 90px 20px;
+}
+
+/* GLASS CARD */
+.glass {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+  backdrop-filter: blur(14px);
+  border-radius: 18px;
+  transition: all 0.25s ease;
+}
+
+.glass:hover {
+  transform: translateY(-6px);
+  border-color: rgba(59,130,246,0.4);
+}
+
+/* SCROLLBAR */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1f2937;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3b82f6;
+}
+
+/* =========================
+   CLEAN ANIMATIONS ONLY
+========================= */
+
+/* FLOAT */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-18px); }
+}
+
+.animate-float {
+  animation: float 5s ease-in-out infinite;
+}
+
+.animate-float-delay {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* SLOW FLOAT */
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-30px); }
+}
+
+.animate-float-slow {
+  animation: floatSlow 8s ease-in-out infinite;
+}
+
+/* LINE MOVE */
+@keyframes lineMove {
+  0% { transform: translateX(-20%); }
+  100% { transform: translateX(20%); }
+}
+
+.animate-lineMove {
+  animation: lineMove 8s linear infinite;
+}
