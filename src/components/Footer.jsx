@@ -38,7 +38,7 @@ export default function Footer() {
       />
 
       {/* TOP LINE */}
-      <div className="absolute top-0 left-[-50%] w-[200%] h-px bg-linear-to-r from-transparent via-cyan-400 to-transparent opacity-60 animate-lineMove" />
+      <div className="absolute top-0 left-[-50%] w-[400%] h-px bg-linear-to-r from-transparent via-cyan-400 to-transparent opacity-60 animate-lineMove" />
 
       {/* ORBS (UNCHANGED VISUAL) */}
       <div className="absolute -top-24 -left-24 w-60 h-60 bg-cyan-500/10 rounded-full blur-[90px]" />
@@ -145,7 +145,7 @@ export default function Footer() {
         </div>
 
         {/* BOTTOM */}
-        <div className="mt-10 pt-6 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-3">
+        <div className="mt-5 pt-3 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-3">
 
           <p className="text-zinc-500 text-xs tracking-wide">
             © {new Date().getFullYear()} Tejas Jangra — All rights reserved
